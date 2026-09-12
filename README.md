@@ -111,7 +111,90 @@ It also lets users compare their eyes with iconic cinema-eye references and comp
 - Node.js
 - npm
 
+--- ### Screenshots
+https://raw.githubusercontent.com/nivedh77/KANPEELI/refs/heads/main/WhatsApp%20Image%202026-09-12%20at%2018.16.44.jpeg
+https://raw.githubusercontent.com/nivedh77/KANPEELI/refs/heads/main/WhatsApp%20Image%202026-09-12%20at%2018.16.44%20(1).jpeg
+https://raw.githubusercontent.com/nivedh77/KANPEELI/refs/heads/main/WhatsApp%20Image%202026-09-12%20at%2018.16.44%20(2).jpeg
+https://raw.githubusercontent.com/nivedh77/KANPEELI/refs/heads/main/WhatsApp%20Image%202026-09-12%20at%2018.16.44%20(1).jpeg
+https://raw.githubusercontent.com/nivedh77/KANPEELI/refs/heads/main/WhatsApp%20Image%202026-09-12%20at%2018.16.44%20(3).jpeg
+https://raw.githubusercontent.com/nivedh77/KANPEELI/refs/heads/main/WhatsApp%20Image%202026-09-12%20at%2018.16.44%20(4).jpeg
+https://raw.githubusercontent.com/nivedh77/KANPEELI/refs/heads/main/WhatsApp%20Image%202026-09-12%20at%2018.16.44%20(5).jpeg
+
+
+ Implementation
+
+## For Software:
+
+KANNPEELI consists of a React-based frontend and a Python-based computer vision backend.
+
+The frontend provides the interactive user interface, camera experience, scanning animations, results, cinema-eye archive, and lash leaderboard.
+
+The backend handles image processing and computer vision operations using Python, OpenCV, NumPy, and the project's eyelash detection and analysis modules.
+
 ---
+
+## Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/nivedh77/KANPEELI.git
+cd KANPEELI
+
+2. nstall backend dependencies
+cd backend
+pip install -r requirements.txt
+3. Install frontend dependencies
+
+Open another terminal:
+
+cd frontend
+npm install
+Run
+Start the Backend
+
+From the backend directory:
+
+uvicorn main:app --reload
+
+The backend will start locally.
+
+Start the Frontend
+
+From the frontend directory:
+
+npm run dev
+
+Open the local URL shown by Vite in your browser.
+
+Project Documentation
+For Software:
+Screenshots
+1. KANNPEELI Ocular Radar
+
+Caption: The KANNPEELI homepage featuring the interactive Ocular Radar, live eye tracking, scanning presets, and the intentionally serious presentation of an entirely unnecessary technology.
+
+2. Eyelash Scanner
+
+Caption: The evidence submission and scanning interface where users can launch the camera scanner or upload an image for eyelash analysis.
+
+3. Cinema Eye Archives
+
+Caption: The Cinema Ocular Archives, where users can compare their ocular characteristics with legendary cinema-inspired eye profiles.
+
+4. Lash Rankings
+
+Caption: The public Lash Rankings showing users competing for the completely meaningless achievement of having the highest number of eyelashes.
+
+5. Official Submission
+
+Caption: The official KANNPEELI submission section where users can submit their eyelash count and claim their completely unnecessary certificate.
+
+Diagrams
+
+Caption: KANNPEELI workflow showing the process from camera/image input to eye detection, image processing, eyelash analysis, metric generation, and final humorous report.
+
+
 
 # 🏗️ System Architecture
 
