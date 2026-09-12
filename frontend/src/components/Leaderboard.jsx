@@ -16,11 +16,29 @@ function Leaderboard({ refreshTrigger }) {
 
   async function fetchScores() {
     setLoading(true);
+    let serverScores = [];
     try {
       const data = await getLeaderboard();
-      setEntries(Array.isArray(data) ? data : []);
+      serverScores = Array.isArray(data) ? data : [];
     } catch (err) {
-      console.error(err);
+      console.warn("Could not fetch remote leaderboard, displaying local record:", err);
+    }
+
+    try {
+      const localScores = JSON.parse(localStorage.getItem("kannpeeli_leaderboard") || "[]");
+      const combined = [...localScores, ...serverScores];
+      const seen = new Set();
+      const deduplicated = [];
+      for (const item of combined) {
+        const key = item.id || `${item.name}-${item.lashes}-${item.timestamp}`;
+        if (!seen.has(key)) {
+          seen.add(key);
+          deduplicated.push(item);
+        }
+      }
+      setEntries(deduplicated);
+    } catch (e) {
+      setEntries(serverScores);
     } finally {
       setLoading(false);
     }
@@ -29,11 +47,12 @@ function Leaderboard({ refreshTrigger }) {
   async function handleClearLeaderboard() {
     if (window.confirm("Are you sure you want to clear past participants from the leaderboard?")) {
       try {
+        localStorage.removeItem("kannpeeli_leaderboard");
         await clearLeaderboardApi();
-        setEntries([]);
       } catch (err) {
-        console.error(err);
+        console.warn("Remote clear failed:", err);
       }
+      setEntries([]);
     }
   }
 

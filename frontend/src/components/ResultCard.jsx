@@ -95,13 +95,36 @@ function ResultCard({
         image: "/memes/damu_eyes.jpg"
       };
 
-      await submitScore(
-        name.trim() || "Anonymous Eyelash",
-        score,
-        lashes,
-        classification,
-        movieData
-      );
+      try {
+        await submitScore(
+          name.trim() || "Anonymous Eyelash",
+          score,
+          lashes,
+          classification,
+          movieData
+        );
+      } catch (err) {
+        console.warn("Backend leaderboard unavailable, saving score locally:", err);
+        // Resilient fallback: store locally so the user's certificate and score are preserved
+        try {
+          const localList = JSON.parse(localStorage.getItem("kannpeeli_leaderboard") || "[]");
+          localList.unshift({
+            id: `lash-local-${Date.now()}`,
+            name: name.trim() || "Anonymous Eyelash",
+            score: Number(score) || 0,
+            lashes: Number(lashes) || 0,
+            classification: classification || "Certified Citizen",
+            movie_character: movieData?.character || "Dashamoolam Damu",
+            character_movie: movieData?.movie || "Chattambinadu",
+            character_image: movieData?.image || "/memes/damu_eyes.jpg",
+            timestamp: "Just now",
+            rank: 1
+          });
+          localStorage.setItem("kannpeeli_leaderboard", JSON.stringify(localList.slice(0, 50)));
+        } catch (storageErr) {
+          console.error(storageErr);
+        }
+      }
 
       setSubmitted(true);
       playSuccessChime();
@@ -120,7 +143,6 @@ function ResultCard({
       }, 100);
     } catch (err) {
       console.error(err);
-      alert("Failed to record score to the public record.");
     } finally {
       setSubmitting(false);
     }
