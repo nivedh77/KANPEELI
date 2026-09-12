@@ -121,6 +121,8 @@ https://raw.githubusercontent.com/nivedh77/KANPEELI/refs/heads/main/WhatsApp%20I
 https://raw.githubusercontent.com/nivedh77/KANPEELI/refs/heads/main/WhatsApp%20Image%202026-09-12%20at%2018.16.44%20(5).jpeg
 
 
+Video: https://drive.google.com/file/d/1__DK6vtrDpCmI2RidWFTJl-33aVD8eg2/view?usp=drivesdk
+
  Implementation
 
 ## For Software:
