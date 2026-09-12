@@ -25,19 +25,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-import os
-from starlette.responses import FileResponse
-
-DIST_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "frontend", "dist"))
-
 # --------------------------------------------------
 # Root & Health
 # --------------------------------------------------
 @app.get("/")
 def root():
-    index_file = os.path.join(DIST_PATH, "index.html")
-    if os.path.isfile(index_file):
-        return FileResponse(index_file)
     return {
         "message": "KANNPEELI online.",
         "brand": "കൺപീലി",
@@ -47,8 +39,8 @@ def root():
     }
 
 
-
 @app.get("/health")
+@app.get("/api/health")
 def health():
     return {
         "status": "online",
@@ -64,6 +56,7 @@ def health():
 # Analyze Endpoint
 # --------------------------------------------------
 @app.post("/analyze")
+@app.post("/api/analyze")
 async def analyze_endpoint(file: UploadFile = File(...)):
     try:
         contents = await file.read()
@@ -123,6 +116,7 @@ async def analyze_endpoint(file: UploadFile = File(...)):
 # Leaderboard Endpoints
 # --------------------------------------------------
 @app.get("/leaderboard")
+@app.get("/api/leaderboard")
 def get_leaderboard_endpoint():
     scores = get_top_scores(30)
     return {
@@ -133,6 +127,7 @@ def get_leaderboard_endpoint():
 
 
 @app.post("/leaderboard")
+@app.post("/api/leaderboard")
 async def submit_score_endpoint(request: Request):
     try:
         payload = await request.json()
@@ -165,6 +160,7 @@ async def submit_score_endpoint(request: Request):
 
 
 @app.delete("/leaderboard")
+@app.delete("/api/leaderboard")
 def reset_leaderboard_endpoint():
     scores = clear_leaderboard()
     return {
@@ -172,35 +168,3 @@ def reset_leaderboard_endpoint():
         "message": "Leaderboard wiped clean.",
         "entries": scores
     }
-
-
-# --------------------------------------------------
-# Static Frontend Serving (All-in-One Deployment)
-# --------------------------------------------------
-from fastapi.staticfiles import StaticFiles
-
-if os.path.isdir(DIST_PATH):
-    assets_dir = os.path.join(DIST_PATH, "assets")
-    if os.path.isdir(assets_dir):
-        app.mount("/assets", StaticFiles(directory=assets_dir), name="assets")
-
-    memes_dir = os.path.join(DIST_PATH, "memes")
-    if os.path.isdir(memes_dir):
-        app.mount("/memes", StaticFiles(directory=memes_dir), name="memes")
-
-    audio_dir = os.path.join(DIST_PATH, "audio")
-    if os.path.isdir(audio_dir):
-        app.mount("/audio", StaticFiles(directory=audio_dir), name="audio")
-
-    @app.get("/{full_path:path}")
-    async def serve_spa_frontend(full_path: str):
-        # Don't intercept API routes
-        if full_path in ["analyze", "leaderboard", "health", "metrics", "docs", "openapi.json"]:
-            return {"error": "Endpoint not found"}
-        target = os.path.join(DIST_PATH, full_path)
-        if full_path and os.path.isfile(target):
-            return FileResponse(target)
-        index_file = os.path.join(DIST_PATH, "index.html")
-        if os.path.isfile(index_file):
-            return FileResponse(index_file)
-        return {"error": "Frontend build not found"}
