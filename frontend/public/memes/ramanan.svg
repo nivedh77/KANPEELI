@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-ramanan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0f2fe" />
+      <stop offset="100%" stop-color="#bae6fd" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="3" dy="3" stdDeviation="0" flood-color="#121826" />
+    </filter>
+  </defs>
+
+  <rect width="400" height="400" fill="url(#bg-ramanan)" rx="24" stroke="#121826" stroke-width="4" />
+  
+  <rect x="24" y="24" width="160" height="32" rx="8" fill="#121826" />
+  <text x="104" y="45" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="12" fill="#CEF53D" text-anchor="middle" letter-spacing="1">PUNJABI HOUSE</text>
+
+  <!-- Head -->
+  <circle cx="200" cy="175" r="95" fill="#fed7aa" stroke="#121826" stroke-width="4" filter="url(#shadow)" />
+  
+  <!-- Disheveled Exhausted Hair -->
+  <path d="M 110 150 C 95 90, 160 70, 200 70 C 240 70, 305 90, 290 150 Z" fill="#121826" />
+  <path d="M 105 130 L 90 110 M 130 80 L 120 60 M 270 80 L 285 60" stroke="#121826" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Bewildered / Helpless Eyes -->
+  <ellipse cx="160" cy="165" rx="22" ry="26" fill="#ffffff" stroke="#121826" stroke-width="3.5" />
+  <ellipse cx="240" cy="165" rx="22" ry="26" fill="#ffffff" stroke="#121826" stroke-width="3.5" />
+  
+  <circle cx="160" cy="172" r="9" fill="#121826" />
+  <circle cx="240" cy="172" r="9" fill="#121826" />
+
+  <!-- Exactly 3 Sparse Stressed Lashes Per Eye -->
+  <path d="M 145 142 L 140 128 M 160 138 L 160 124 M 175 142 L 180 128" stroke="#121826" stroke-width="3" stroke-linecap="round" />
+  <path d="M 225 142 L 220 128 M 240 138 L 240 124 M 255 142 L 260 128" stroke="#121826" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Worried Eyebrows Angled Upward -->
+  <path d="M 140 130 L 180 140" stroke="#121826" stroke-width="4" stroke-linecap="round" />
+  <path d="M 260 130 L 220 140" stroke="#121826" stroke-width="4" stroke-linecap="round" />
+
+  <!-- Drooping Sad Mouth -->
+  <path d="M 170 230 Q 200 215 230 230" fill="none" stroke="#121826" stroke-width="4" stroke-linecap="round" />
+
+  <!-- Bottom Banner -->
+  <rect x="30" y="300" width="340" height="76" rx="14" fill="#ffffff" stroke="#121826" stroke-width="3" filter="url(#shadow)" />
+  <text x="200" y="332" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="20" fill="#121826" text-anchor="middle">RAMANAN</text>
+  <text x="200" y="358" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="12" fill="#0284c7" text-anchor="middle">"Mudalali... idhellam kanakkano?!"</text>
+</svg>

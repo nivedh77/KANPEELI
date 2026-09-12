@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-thoma" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffedd5" />
+      <stop offset="100%" stop-color="#fed7aa" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="3" dy="3" stdDeviation="0" flood-color="#121826" />
+    </filter>
+  </defs>
+
+  <rect width="400" height="400" fill="url(#bg-thoma)" rx="24" stroke="#121826" stroke-width="4" />
+  
+  <rect x="24" y="24" width="120" height="32" rx="8" fill="#121826" />
+  <text x="84" y="45" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="12" fill="#CEF53D" text-anchor="middle" letter-spacing="1">SPADIKAM</text>
+
+  <!-- Head -->
+  <circle cx="200" cy="175" r="95" fill="#fcd34d" stroke="#121826" stroke-width="4" filter="url(#shadow)" />
+  
+  <!-- Thick Rugged Hair -->
+  <path d="M 105 160 C 95 70, 155 50, 200 55 C 245 50, 305 70, 295 160 Z" fill="#121826" />
+
+  <!-- Iconic Black Aviator Ray-Bans -->
+  <path d="M 130 145 C 130 135, 185 135, 185 150 C 185 180, 140 190, 130 170 Z" fill="#121826" stroke="#121826" stroke-width="2" />
+  <path d="M 215 150 C 215 135, 270 135, 270 145 C 260 190, 215 180, 215 170 Z" fill="#121826" stroke="#121826" stroke-width="2" />
+  <line x1="185" y1="145" x2="215" y2="145" stroke="#121826" stroke-width="4" />
+
+  <!-- Glass Glare Lines on Ray-Bans -->
+  <line x1="145" y1="145" x2="165" y2="175" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+  <line x1="230" y1="145" x2="250" y2="175" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Rebel Eyelashes Sprouting Over Sunglasses -->
+  <path d="M 140 132 L 132 115 M 155 130 L 152 110 M 170 132 L 175 115" stroke="#121826" stroke-width="3.5" stroke-linecap="round" />
+  <path d="M 230 132 L 225 115 M 245 130 L 248 110 M 260 132 L 268 115" stroke="#121826" stroke-width="3.5" stroke-linecap="round" />
+
+  <!-- Heavy Beard & Mustache -->
+  <path d="M 145 205 Q 200 195 255 205 Q 260 260 200 270 Q 140 260 145 205 Z" fill="#121826" />
+
+  <!-- Bottom Banner -->
+  <rect x="30" y="300" width="340" height="76" rx="14" fill="#ffffff" stroke="#121826" stroke-width="3" filter="url(#shadow)" />
+  <text x="200" y="332" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="20" fill="#121826" text-anchor="middle">AADU THOMA</text>
+  <text x="200" y="358" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="12" fill="#c2410c" text-anchor="middle">"Ray-Ban vechu nokkiyatha... Mass!"</text>
+</svg>

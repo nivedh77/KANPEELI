@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="zoomer-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="50%" stop-color="#312e81" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="neon-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#cef53d" />
+      <stop offset="100%" stop-color="#ff6b6b" />
+    </linearGradient>
+    <filter id="neon-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#cef53d" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Cinema letterbox container background -->
+  <rect width="600" height="240" fill="url(#zoomer-bg)" />
+  
+  <!-- Subtle futuristic digital grid lines -->
+  <line x1="0" y1="40" x2="600" y2="40" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+  <line x1="0" y1="120" x2="600" y2="120" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="4 4" />
+  <line x1="0" y1="200" x2="600" y2="200" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+  <line x1="150" y1="0" x2="150" y2="240" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+  <line x1="300" y1="0" x2="300" y2="240" stroke="rgba(206,245,61,0.2)" stroke-width="1" stroke-dasharray="2 4" />
+  <line x1="450" y1="0" x2="450" y2="240" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+
+  <!-- Skin tone eye mask region -->
+  <path d="M 80 120 C 130 50, 470 50, 520 120 C 470 190, 130 190, 80 120 Z" fill="#fcd34d" opacity="0.9" stroke="#121826" stroke-width="3"/>
+
+  <!-- Messy curly Gen-Z bangs draping across forehead -->
+  <path d="M 120 40 C 160 90, 200 70, 240 105 C 270 80, 310 95, 350 75 C 380 90, 420 85, 470 50 Z" fill="#18181b" stroke="#121826" stroke-width="3" />
+  <path d="M 180 40 Q 210 95 240 70" stroke="#18181b" stroke-width="6" stroke-linecap="round" fill="none" />
+  <path d="M 280 45 Q 310 100 340 65" stroke="#18181b" stroke-width="6" stroke-linecap="round" fill="none" />
+  <path d="M 380 40 Q 405 90 430 65" stroke="#18181b" stroke-width="6" stroke-linecap="round" fill="none" />
+
+  <!-- LEFT EYE: Sleek, wide, phone-screen illuminated -->
+  <g id="left-eye">
+    <!-- Eyebrow with Gen-Z slit -->
+    <path d="M 145 78 Q 195 62 250 75" stroke="#18181b" stroke-width="9" stroke-linecap="round" fill="none" />
+    <line x1="215" y1="65" x2="218" y2="78" stroke="#fcd34d" stroke-width="4" />
+
+    <!-- Sclera -->
+    <ellipse cx="200" cy="122" rx="48" ry="26" fill="#ffffff" stroke="#121826" stroke-width="3.5" />
+    
+    <!-- Iris: Deep amber hazel with smartphone reflection -->
+    <circle cx="202" cy="122" r="20" fill="#78350f" stroke="#121826" stroke-width="2" />
+    <circle cx="202" cy="122" r="11" fill="#09090b" />
+    
+    <!-- Smartphone screen catchlight / glare -->
+    <rect x="194" y="112" width="7" height="12" rx="2" fill="#67e8f9" opacity="0.9" />
+    <circle cx="208" cy="128" r="3" fill="#ffffff" />
+
+    <!-- UPPER EYELASHES (Dense, fluttery, aerodynamic) -->
+    <path d="M 158 110 Q 152 94 146 90" stroke="#121826" stroke-width="3" stroke-linecap="round" />
+    <path d="M 168 104 Q 164 88 158 84" stroke="#121826" stroke-width="3" stroke-linecap="round" />
+    <path d="M 180 100 Q 178 82 174 78" stroke="#121826" stroke-width="3.2" stroke-linecap="round" />
+    <path d="M 194 98 Q 194 80 193 75" stroke="#121826" stroke-width="3.5" stroke-linecap="round" />
+    <path d="M 208 99 Q 212 81 214 76" stroke="#121826" stroke-width="3.5" stroke-linecap="round" />
+    <path d="M 222 101 Q 228 84 234 80" stroke="#121826" stroke-width="3.2" stroke-linecap="round" />
+    <path d="M 234 106 Q 242 90 250 86" stroke="#121826" stroke-width="3" stroke-linecap="round" />
+    <path d="M 244 114 Q 254 100 262 98" stroke="#121826" stroke-width="3" stroke-linecap="round" />
+
+    <!-- LOWER EYELASHES -->
+    <path d="M 172 138 Q 170 148 168 153" stroke="#121826" stroke-width="2" stroke-linecap="round" />
+    <path d="M 186 143 Q 186 154 186 158" stroke="#121826" stroke-width="2" stroke-linecap="round" />
+    <path d="M 202 144 Q 204 155 205 160" stroke="#121826" stroke-width="2" stroke-linecap="round" />
+    <path d="M 218 142 Q 222 152 225 156" stroke="#121826" stroke-width="2" stroke-linecap="round" />
+    <path d="M 232 137 Q 238 147 242 150" stroke="#121826" stroke-width="2" stroke-linecap="round" />
+  </g>
+
+  <!-- Nose bridge -->
+  <path d="M 292 110 Q 300 138 290 148" stroke="#d97706" stroke-width="3" stroke-linecap="round" fill="none" />
+
+  <!-- RIGHT EYE -->
+  <g id="right-eye">
+    <!-- Eyebrow -->
+    <path d="M 350 75 Q 405 62 455 78" stroke="#18181b" stroke-width="9" stroke-linecap="round" fill="none" />
+
+    <!-- Sclera -->
+    <ellipse cx="400" cy="122" rx="48" ry="26" fill="#ffffff" stroke="#121826" stroke-width="3.5" />
+    
+    <!-- Iris -->
+    <circle cx="398" cy="122" r="20" fill="#78350f" stroke="#121826" stroke-width="2" />
+    <circle cx="398" cy="122" r="11" fill="#09090b" />
+    
+    <!-- Smartphone screen catchlight / glare -->
+    <rect x="390" y="112" width="7" height="12" rx="2" fill="#67e8f9" opacity="0.9" />
+    <circle cx="404" cy="128" r="3" fill="#ffffff" />
+
+    <!-- UPPER EYELASHES -->
+    <path d="M 356 114 Q 346 100 338 98" stroke="#121826" stroke-width="3" stroke-linecap="round" />
+    <path d="M 366 106 Q 358 90 350 86" stroke="#121826" stroke-width="3" stroke-linecap="round" />
+    <path d="M 378 101 Q 372 84 366 80" stroke="#121826" stroke-width="3.2" stroke-linecap="round" />
+    <path d="M 392 99 Q 388 81 386 76" stroke="#121826" stroke-width="3.5" stroke-linecap="round" />
+    <path d="M 406 98 Q 406 80 407 75" stroke="#121826" stroke-width="3.5" stroke-linecap="round" />
+    <path d="M 420 100 Q 422 82 426 78" stroke="#121826" stroke-width="3.2" stroke-linecap="round" />
+    <path d="M 432 104 Q 436 88 442 84" stroke="#121826" stroke-width="3" stroke-linecap="round" />
+    <path d="M 442 110 Q 448 94 454 90" stroke="#121826" stroke-width="3" stroke-linecap="round" />
+
+    <!-- LOWER EYELASHES -->
+    <path d="M 368 137 Q 362 147 358 150" stroke="#121826" stroke-width="2" stroke-linecap="round" />
+    <path d="M 382 142 Q 378 152 375 156" stroke="#121826" stroke-width="2" stroke-linecap="round" />
+    <path d="M 398 144 Q 396 155 395 160" stroke="#121826" stroke-width="2" stroke-linecap="round" />
+    <path d="M 414 143 Q 414 154 414 158" stroke="#121826" stroke-width="2" stroke-linecap="round" />
+    <path d="M 428 138 Q 430 148 432 153" stroke="#121826" stroke-width="2" stroke-linecap="round" />
+  </g>
+
+  <!-- Stylish Gen-Z wireframe round spectacles -->
+  <circle cx="200" cy="122" r="58" fill="none" stroke="#cef53d" stroke-width="3" filter="url(#neon-shadow)" />
+  <circle cx="400" cy="122" r="58" fill="none" stroke="#cef53d" stroke-width="3" filter="url(#neon-shadow)" />
+  <path d="M 258 118 Q 300 108 342 118" fill="none" stroke="#cef53d" stroke-width="3" filter="url(#neon-shadow)" />
+
+  <!-- Letterbox border overlay and tech badges -->
+  <rect x="2" y="2" width="596" height="236" fill="none" stroke="#121826" stroke-width="4" />
+  <rect x="18" y="16" width="130" height="24" rx="6" fill="#121826" />
+  <text x="83" y="32" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="10" fill="#cef53d" text-anchor="middle" letter-spacing="1">PREMALU // GEN-Z</text>
+  <text x="580" y="32" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="10" fill="#cef53d" text-anchor="end">OCULAR ARCHIVE #08</text>
+</svg>

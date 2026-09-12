@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-kumbidi" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef3c7" />
+      <stop offset="100%" stop-color="#fde68a" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="3" dy="3" stdDeviation="0" flood-color="#121826" />
+    </filter>
+  </defs>
+
+  <rect width="400" height="400" fill="url(#bg-kumbidi)" rx="24" stroke="#121826" stroke-width="4" />
+  
+  <rect x="24" y="24" width="120" height="32" rx="8" fill="#121826" />
+  <text x="84" y="45" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="12" fill="#CEF53D" text-anchor="middle" letter-spacing="1">NANDANAM</text>
+
+  <!-- Head -->
+  <circle cx="200" cy="175" r="95" fill="#fde047" stroke="#121826" stroke-width="4" filter="url(#shadow)" />
+  
+  <!-- Vibhuti lines on forehead -->
+  <line x1="160" y1="110" x2="240" y2="110" stroke="#ffffff" stroke-width="4" stroke-linecap="round" />
+  <line x1="165" y1="118" x2="235" y2="118" stroke="#ffffff" stroke-width="4" stroke-linecap="round" />
+  <line x1="170" y1="126" x2="230" y2="126" stroke="#ffffff" stroke-width="4" stroke-linecap="round" />
+  <circle cx="200" cy="118" r="4" fill="#E7583F" />
+
+  <!-- Shifty Cunning Eyes (Looking up-right) -->
+  <ellipse cx="160" cy="165" rx="24" ry="20" fill="#ffffff" stroke="#121826" stroke-width="3.5" />
+  <ellipse cx="240" cy="165" rx="24" ry="20" fill="#ffffff" stroke="#121826" stroke-width="3.5" />
+  
+  <circle cx="168" cy="160" r="9" fill="#121826" />
+  <circle cx="248" cy="160" r="9" fill="#121826" />
+
+  <!-- Mysterious Asymmetrical Lashes -->
+  <path d="M 145 148 L 138 132 M 160 145 L 160 128 M 175 148 L 182 134" stroke="#121826" stroke-width="3" stroke-linecap="round" />
+  <path d="M 225 148 L 220 134 M 240 145 L 242 128 M 255 148 L 265 132 M 262 155 L 275 146" stroke="#121826" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Mysterious Smirk -->
+  <path d="M 170 215 Q 210 240 245 210" fill="none" stroke="#121826" stroke-width="4" stroke-linecap="round" />
+
+  <!-- Bottom Banner -->
+  <rect x="30" y="300" width="340" height="76" rx="14" fill="#ffffff" stroke="#121826" stroke-width="3" filter="url(#shadow)" />
+  <text x="200" y="332" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="20" fill="#121826" text-anchor="middle">KUMBIDI</text>
+  <text x="200" y="358" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="12" fill="#b45309" text-anchor="middle">"Evide nokkiyaalum Kumbidi!"</text>
+</svg>
