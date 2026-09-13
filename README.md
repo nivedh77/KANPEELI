@@ -1,4 +1,4 @@
-#  KANNPEELI — Eyelashes count nobody asked for.
+#  KANNPEELI — Eyelashes count,nobody asked for.
 
 > The world didn't need this. We built it anyway.
 
@@ -10,7 +10,7 @@ It combines computer vision, a playful ocular-analysis interface, cinematic eye 
 
 ---
 
-## 👥 Team
+##  Team
 
 ### Team Name
 **STRANGERS**
