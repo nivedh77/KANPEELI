@@ -111,19 +111,28 @@ It also lets users compare their eyes with iconic cinema-eye references and comp
 - Node.js
 - npm
 
---- ### Screenshots
-https://raw.githubusercontent.com/nivedh77/KANPEELI/refs/heads/main/WhatsApp%20Image%202026-09-12%20at%2018.16.44.jpeg
-https://raw.githubusercontent.com/nivedh77/KANPEELI/refs/heads/main/WhatsApp%20Image%202026-09-12%20at%2018.16.44%20(1).jpeg
-https://raw.githubusercontent.com/nivedh77/KANPEELI/refs/heads/main/WhatsApp%20Image%202026-09-12%20at%2018.16.44%20(2).jpeg
-https://raw.githubusercontent.com/nivedh77/KANPEELI/refs/heads/main/WhatsApp%20Image%202026-09-12%20at%2018.16.44%20(1).jpeg
-https://raw.githubusercontent.com/nivedh77/KANPEELI/refs/heads/main/WhatsApp%20Image%202026-09-12%20at%2018.16.44%20(3).jpeg
-https://raw.githubusercontent.com/nivedh77/KANPEELI/refs/heads/main/WhatsApp%20Image%202026-09-12%20at%2018.16.44%20(4).jpeg
-https://raw.githubusercontent.com/nivedh77/KANPEELI/refs/heads/main/WhatsApp%20Image%202026-09-12%20at%2018.16.44%20(5).jpeg
+
+##  Screenshots
+
+![Screenshot 1](https://raw.githubusercontent.com/nivedh77/KANPEELI/refs/heads/main/WhatsApp%20Image%202026-09-12%20at%2018.16.44.jpeg)
+
+![Screenshot 2](https://raw.githubusercontent.com/nivedh77/KANPEELI/refs/heads/main/WhatsApp%20Image%202026-09-12%20at%2018.16.44%20(1).jpeg)
+
+![Screenshot 3](https://raw.githubusercontent.com/nivedh77/KANPEELI/refs/heads/main/WhatsApp%20Image%202026-09-12%20at%2018.16.44%20(2).jpeg)
+
+![Screenshot 4](https://raw.githubusercontent.com/nivedh77/KANPEELI/refs/heads/main/WhatsApp%20Image%202026-09-12%20at%2018.16.44%20(1).jpeg)
+
+![Screenshot 5](https://raw.githubusercontent.com/nivedh77/KANPEELI/refs/heads/main/WhatsApp%20Image%202026-09-12%20at%2018.16.44%20(3).jpeg)
+
+![Screenshot 6](https://raw.githubusercontent.com/nivedh77/KANPEELI/refs/heads/main/WhatsApp%20Image%202026-09-12%20at%2018.16.44%20(4).jpeg)
+
+### Demo Video
+
+https://drive.google.com/file/d/1__DK6vtrDpCml2RidWFTJl-33aVD8eg2/view?usp=drivesdk
 
 
-Video: https://drive.google.com/file/d/1__DK6vtrDpCmI2RidWFTJl-33aVD8eg2/view?usp=drivesdk
 
- Implementation
+## Implementation
 
 ## For Software:
 
@@ -169,7 +178,7 @@ npm run dev
 
 Open the local URL shown by Vite in your browser.
 
-Project Documentation
+## Project Documentation
 For Software:
 Screenshots
 1. KANNPEELI Ocular Radar
