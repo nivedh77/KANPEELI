@@ -116,15 +116,21 @@ It also lets users compare their eyes with iconic cinema-eye references and comp
 
 ![Screenshot 1](https://raw.githubusercontent.com/nivedh77/KANPEELI/refs/heads/main/WhatsApp%20Image%202026-09-12%20at%2018.16.44.jpeg)
 
+
 ![Screenshot 2](https://raw.githubusercontent.com/nivedh77/KANPEELI/refs/heads/main/WhatsApp%20Image%202026-09-12%20at%2018.16.44%20(1).jpeg)
+
 
 ![Screenshot 3](https://raw.githubusercontent.com/nivedh77/KANPEELI/refs/heads/main/WhatsApp%20Image%202026-09-12%20at%2018.16.44%20(2).jpeg)
 
+
 ![Screenshot 4](https://raw.githubusercontent.com/nivedh77/KANPEELI/refs/heads/main/WhatsApp%20Image%202026-09-12%20at%2018.16.44%20(1).jpeg)
+
 
 ![Screenshot 5](https://raw.githubusercontent.com/nivedh77/KANPEELI/refs/heads/main/WhatsApp%20Image%202026-09-12%20at%2018.16.44%20(3).jpeg)
 
+
 ![Screenshot 6](https://raw.githubusercontent.com/nivedh77/KANPEELI/refs/heads/main/WhatsApp%20Image%202026-09-12%20at%2018.16.44%20(4).jpeg)
+
 
 ### Demo Video
 
