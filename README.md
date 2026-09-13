@@ -1,4 +1,4 @@
-# 👁️ KANNPEELI — Advanced Eyelash Quantification System
+#  KANNPEELI — Eyelashes count nobody asked for.
 
 > The world didn't need this. We built it anyway.
 
@@ -22,7 +22,7 @@ It combines computer vision, a playful ocular-analysis interface, cinematic eye 
 
 ---
 
-# 📝 Project Description
+# Project Description
 
 KANNPEELI is an advanced AI-powered system that uses computer vision to detect, analyze, and count your eyelashes.
 
@@ -30,7 +30,7 @@ It provides sophisticated-looking statistics, ocular analysis, cinema-eye compar
 
 ---
 
-# 🤨 The Problem (that doesn't exist)
+# The Problem (that doesn't exist)
 
 Humanity has successfully counted people, stars, cells, grains of sand, and countless other things.
 
@@ -44,7 +44,7 @@ KANNPEELI exists to fix this extremely serious problem.
 
 ---
 
-# 💡 The Solution (that nobody asked for)
+#  The Solution (that nobody asked for)
 
 KANNPEELI uses computer vision to scan your eyes, isolate the ocular region, estimate/count eyelashes, and generate an unnecessarily detailed report.
 
@@ -63,7 +63,7 @@ It also lets users compare their eyes with iconic cinema-eye references and comp
 
 ---
 
-# 🛠️ Technical Details
+#  Technical Details
 
 ## For Software
 
@@ -198,7 +198,7 @@ Caption: KANNPEELI workflow showing the process from camera/image input to eye d
 
 
 
-# 🏗️ System Architecture
+#  System Architecture
 
 ```text
                  ┌─────────────────────┐
