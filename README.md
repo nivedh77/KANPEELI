@@ -1,8 +1,8 @@
-#  KANNPEELI — Eyelashes count,nobody asked for.
+#  KANPEELI — Eyelashes count,nobody asked for.
 
 > The world didn't need this. We built it anyway.
 
-KANNPEELI is an intentionally useless AI-powered computer-vision system that detects, analyzes, and counts eyelashes from a camera feed or uploaded image.
+KANPEELI is an intentionally useless AI-powered computer-vision system that detects, analyzes, and counts eyelashes from a camera feed or uploaded image.
 
 It combines computer vision, a playful ocular-analysis interface, cinematic eye references, rankings, and completely unnecessary scientific metrics to answer humanity's most important unanswered question:
 
@@ -24,7 +24,7 @@ It combines computer vision, a playful ocular-analysis interface, cinematic eye 
 
 # Project Description
 
-KANNPEELI is an advanced AI-powered system that uses computer vision to detect, analyze, and count your eyelashes.
+KANPEELI is an advanced AI-powered system that uses computer vision to detect, analyze, and count your eyelashes.
 
 It provides sophisticated-looking statistics, ocular analysis, cinema-eye comparisons, rankings, and completely unnecessary scientific conclusions about your eyes.
 
@@ -40,13 +40,13 @@ But somehow...
 
 This unacceptable lack of information has left millions of people living in uncertainty.
 
-KANNPEELI exists to fix this extremely serious problem.
+KANPEELI exists to fix this extremely serious problem.
 
 ---
 
 #  The Solution (that nobody asked for)
 
-KANNPEELI uses computer vision to scan your eyes, isolate the ocular region, estimate/count eyelashes, and generate an unnecessarily detailed report.
+KANPEELI uses computer vision to scan your eyes, isolate the ocular region, estimate/count eyelashes, and generate an unnecessarily detailed report.
 
 The system calculates completely legitimate-sounding metrics such as:
 
@@ -142,7 +142,7 @@ https://drive.google.com/file/d/1__DK6vtrDpCml2RidWFTJl-33aVD8eg2/view?usp=drive
 
 ## For Software:
 
-KANNPEELI consists of a React-based frontend and a Python-based computer vision backend.
+KANPEELI consists of a React-based frontend and a Python-based computer vision backend.
 
 The frontend provides the interactive user interface, camera experience, scanning animations, results, cinema-eye archive, and lash leaderboard.
 
@@ -187,9 +187,9 @@ Open the local URL shown by Vite in your browser.
 ## Project Documentation
 For Software:
 Screenshots
-1. KANNPEELI Ocular Radar
+1. KANPEELI Ocular Radar
 
-Caption: The KANNPEELI homepage featuring the interactive Ocular Radar, live eye tracking, scanning presets, and the intentionally serious presentation of an entirely unnecessary technology.
+Caption: The KANPEELI homepage featuring the interactive Ocular Radar, live eye tracking, scanning presets, and the intentionally serious presentation of an entirely unnecessary technology.
 
 2. Eyelash Scanner
 
@@ -205,11 +205,11 @@ Caption: The public Lash Rankings showing users competing for the completely mea
 
 5. Official Submission
 
-Caption: The official KANNPEELI submission section where users can submit their eyelash count and claim their completely unnecessary certificate.
+Caption: The official KANPEELI submission section where users can submit their eyelash count and claim their completely unnecessary certificate.
 
 Diagrams
 
-Caption: KANNPEELI workflow showing the process from camera/image input to eye detection, image processing, eyelash analysis, metric generation, and final humorous report.
+Caption: KANPEELI workflow showing the process from camera/image input to eye detection, image processing, eyelash analysis, metric generation, and final humorous report.
 
 
 
