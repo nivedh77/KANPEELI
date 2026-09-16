@@ -14,6 +14,7 @@ const MOVIE_EYES = [
     movie: "Chattambinadu",
     actor: "Suraj Venjaramoodu",
     image: "/memes/damu_eyes.jpg",
+    fallbackImage: "/memes/damu.svg",
     trait: "High Suspicion & Rapid Blink",
     quote: "Enne thallalle ammove... ith ente natural peeliya!",
     follicles: 142,
@@ -29,6 +30,7 @@ const MOVIE_EYES = [
     movie: "Kumbalangi Nights",
     actor: "Fahadh Faasil",
     image: "/memes/shammi_eyes.jpg",
+    fallbackImage: "/memes/shammi.svg",
     trait: "Terrifying 99% Symmetry",
     quote: "Shammi hero aada... hero!",
     follicles: 178,
@@ -44,6 +46,7 @@ const MOVIE_EYES = [
     movie: "Spadikam",
     actor: "Mohanlal",
     image: "/memes/aadu_thoma_eyes.jpg",
+    fallbackImage: "/memes/aadu_thoma.svg",
     trait: "Disparity & Ray-Ban Attitude",
     quote: "Ray-Ban vechu nokkiyatha... Mass!",
     follicles: 195,
@@ -59,6 +62,7 @@ const MOVIE_EYES = [
     movie: "Manichitrathazhu",
     actor: "Shobana",
     image: "/memes/nagavalli_eyes.jpg",
+    fallbackImage: "/memes/nagavalli.svg",
     trait: "Extreme Classical Drama",
     quote: "Vidamaatte? Pure Ocular Drama!",
     follicles: 212,
@@ -74,6 +78,7 @@ const MOVIE_EYES = [
     movie: "Pulival Kalyanam",
     actor: "Salim Kumar",
     image: "/memes/manavalan_eyes.jpg",
+    fallbackImage: "/memes/manavalan.svg",
     trait: "Heavy Volume & Swagger",
     quote: "Dubai-il ithokke regular peeliya!",
     follicles: 165,
@@ -89,6 +94,7 @@ const MOVIE_EYES = [
     movie: "Punjabi House",
     actor: "Harisree Ashokan",
     image: "/memes/ramanan_eyes.jpg",
+    fallbackImage: "/memes/ramanan.svg",
     trait: "Minimalist Follicles",
     quote: "Mudalali... idhellam kanakkano?!",
     follicles: 88,
@@ -104,6 +110,7 @@ const MOVIE_EYES = [
     movie: "Nandanam",
     actor: "Jagathy Sreekumar",
     image: "/memes/kumbidi_eyes.jpg",
+    fallbackImage: "/memes/kumbidi.svg",
     trait: "Elusive Quantum Stare",
     quote: "Evide nokkiyaalum Kumbidi!",
     follicles: 155,
@@ -119,6 +126,7 @@ const MOVIE_EYES = [
     movie: "Premalu / Reel Culture",
     actor: "Naslen / Modern Youth",
     image: "/memes/zoomer_eyes.svg",
+    fallbackImage: "/memes/zoomer_eyes.svg",
     trait: "Infinite Scroll & Screen Stare",
     quote: "Bro ith real peeliya bro... literally no cap fr fr!",
     follicles: 130,
@@ -140,6 +148,7 @@ function MovieEyeShowcase() {
   const [bestStare, setBestStare] = useState(0);
   const [stareResult, setStareResult] = useState(null); // { time, status: 'lost'|'won', roast }
   const timerRef = useRef(null);
+  const showcaseCardRef = useRef(null);
 
   // Stare-Down Timer Logic
   useEffect(() => {
@@ -154,6 +163,20 @@ function MovieEyeShowcase() {
     }
     return () => clearInterval(timerRef.current);
   }, [stareActive]);
+
+  function handleSelectCharacter(char) {
+    setSelectedChar(char);
+    setStareActive(false);
+    setStareResult(null);
+    playWhooshSound();
+  }
+
+  function handleSelectAndScroll(char) {
+    handleSelectCharacter(char);
+    if (showcaseCardRef.current) {
+      showcaseCardRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }
 
   function startStareBattle() {
     setStareResult(null);
@@ -192,7 +215,6 @@ function MovieEyeShowcase() {
     });
   }
 
-
   return (
     <section className="showcase-section" id="cinema-lab">
       {/* Neo-brutalist Section Header */}
@@ -209,13 +231,13 @@ function MovieEyeShowcase() {
             The Hall of <span className="lime-highlight">Legendary Eyes</span>
           </h2>
           <p className="showcase-subtitle">
-            Switch between Kerala cinema legends, toggle biometric vision overlays, or test your ocular courage in the Stare-Down Challenge!
+            All 8 Malayalam cinema legends are archived below. Switch between legends, toggle biometric vision overlays, test your gaze in the Stare-Down challenge, or explore the full character gallery!
           </p>
         </div>
 
         <div className="showcase-header-right-badges">
           <div className="showcase-counter-badge">
-            👁️ {MOVIE_EYES.length} CINEMA EYE ARCHIVES
+            👁️ ALL {MOVIE_EYES.length} CINEMA EYE LEGENDS
           </div>
           {bestStare > 0 && (
             <div className="stare-record-badge">
@@ -226,21 +248,13 @@ function MovieEyeShowcase() {
       </div>
 
       {/* Characters Pill Bar */}
-      <div className="showcase-tabs-row">
+      <div className="showcase-tabs-row" aria-label="Character tabs">
         {MOVIE_EYES.map(item => (
           <button
             key={item.id}
             type="button"
             className={`showcase-tab-btn ${selectedChar.id === item.id ? "active" : ""}`}
-            onClick={() => {
-              stopMovieDialogueAudio();
-              stopSpeaking();
-              setIsSpeaking(false);
-              setSelectedChar(item);
-              setStareActive(false);
-              setStareResult(null);
-              playWhooshSound();
-            }}
+            onClick={() => handleSelectCharacter(item)}
           >
             <span className="tab-character-name">{item.character}</span>
             <span className="tab-film-name">{item.movie}</span>
@@ -249,7 +263,7 @@ function MovieEyeShowcase() {
       </div>
 
       {/* Featured Eye Crop Display Card */}
-      <div className="showcase-card">
+      <div className="showcase-card" ref={showcaseCardRef}>
         {/* Left: Specimen Frame with Vision Modes & Stare Battle */}
         <div className="showcase-eye-column">
           {/* Vision Mode Switcher Toolbar */}
@@ -286,6 +300,9 @@ function MovieEyeShowcase() {
               src={selectedChar.image}
               alt={selectedChar.character}
               className={`showcase-eye-img ${visionMode === "thermal" ? "thermal-filter" : ""}`}
+              onError={(e) => {
+                e.target.src = selectedChar.fallbackImage || "/memes/damu_eyes.jpg";
+              }}
             />
 
             {/* Standard Laser Scanline */}
@@ -364,7 +381,7 @@ function MovieEyeShowcase() {
             )}
           </div>
 
-          {/* Stare Result Callout with Speak Roast Option */}
+          {/* Stare Result Callout */}
           {stareResult && (
             <div className={`stare-result-callout ${stareResult.status === "won" ? "won" : "lost"}`}>
               <div className="stare-result-header">
@@ -396,7 +413,6 @@ function MovieEyeShowcase() {
             <span className="dialogue-quote-symbol">“</span>
             <p className="meme-quote-text">{selectedChar.quote}</p>
           </div>
-
 
           {/* Follicular Metric Telemetry Grid */}
           <div className="character-telemetry-grid">
@@ -439,6 +455,88 @@ function MovieEyeShowcase() {
             <span>ALGORITHM: BLACKHAT 9x9</span>
             <span>MATCH ACCURACY: 99.4% USELESS</span>
           </div>
+        </div>
+      </div>
+
+      {/* -----------------------------------------------------------------
+          ALL 8 MOVIE CHARACTERS GALLERY GRID
+          Displays all characters simultaneously so users can see every legend
+          ----------------------------------------------------------------- */}
+      <div className="all-movie-legends-container">
+        <div className="all-legends-header">
+          <div>
+            <span className="section-tag lime">ARCHIVED SPECIMENS</span>
+            <h3 className="all-legends-title">All 8 Cinema Eye Legends</h3>
+            <p className="all-legends-desc">
+              Browse the complete gallery of legendary cinema gazes. Click any character to load them directly into the ocular scanner HUD.
+            </p>
+          </div>
+          <span className="all-legends-count-pill">{MOVIE_EYES.length} PROFILES ARCHIVED</span>
+        </div>
+
+        <div className="all-legends-grid">
+          {MOVIE_EYES.map(item => {
+            const isSelected = selectedChar.id === item.id;
+            return (
+              <div
+                key={item.id}
+                className={`legend-card-box ${isSelected ? "selected-legend" : ""}`}
+                onClick={() => handleSelectAndScroll(item)}
+              >
+                {/* Eye Crop Strip */}
+                <div className="legend-card-eye-strip">
+                  <img
+                    src={item.image}
+                    alt={item.character}
+                    className="legend-card-eye-img"
+                    onError={(e) => {
+                      e.target.src = item.fallbackImage || "/memes/damu_eyes.jpg";
+                    }}
+                  />
+                  <div className="eye-strip-scanline"></div>
+                  <span className="legend-card-threat-tag">{item.threatLevel}</span>
+                  {isSelected && <span className="legend-card-active-tag">● ACTIVE IN HUD</span>}
+                </div>
+
+                {/* Card Meta Content */}
+                <div className="legend-card-body">
+                  <div className="legend-card-title-row">
+                    <div>
+                      <h4 className="legend-card-name">{item.character}</h4>
+                      <span className="legend-card-film">{item.movie} ({item.actor})</span>
+                    </div>
+                  </div>
+
+                  <p className="legend-card-quote">“{item.quote}”</p>
+
+                  <div className="legend-card-stats-row">
+                    <span className="legend-stat-pill lime">
+                      👁️ <strong>{item.follicles}</strong> lashes
+                    </span>
+                    <span className="legend-stat-pill coral">
+                      ⚠️ <strong>{item.suspicion}%</strong> susp
+                    </span>
+                    <span className="legend-stat-pill cyan">
+                      📐 <strong>{item.symmetry}%</strong> sym
+                    </span>
+                  </div>
+
+                  <div className="legend-card-actions">
+                    <button
+                      type="button"
+                      className={`btn-neo ${isSelected ? "btn-lime" : "btn-cream"} legend-inspect-btn`}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleSelectAndScroll(item);
+                      }}
+                    >
+                      {isSelected ? "✓ Active in HUD" : "🔍 Load in Viewport"}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

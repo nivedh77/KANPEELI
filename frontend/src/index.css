@@ -2308,8 +2308,215 @@ body {
 .mini-progress-fill.gold { background: #d97706; }
 
 /* ==========================================================================
-   HUD CORNER BRACKETS
+   ALL 8 CINEMA EYE LEGENDS GALLERY GRID
    ========================================================================== */
+.all-movie-legends-container {
+  margin-top: 3.5rem;
+  padding-top: 2.5rem;
+  border-top: 2.5px dashed var(--ink-black);
+}
+
+.all-legends-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.all-legends-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.8vw, 1.95rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin: 0.35rem 0;
+}
+
+.all-legends-desc {
+  font-size: 0.92rem;
+  color: var(--ink-muted);
+  max-width: 620px;
+}
+
+.all-legends-count-pill {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 800;
+  background: var(--dark-section);
+  color: #ffffff;
+  border: var(--border-thick);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  box-shadow: var(--shadow-neo-sm);
+}
+
+.all-legends-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.legend-card-box {
+  background: #ffffff;
+  border: var(--border-thick);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-neo);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+}
+
+.legend-card-box:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-neo-lg);
+  border-color: var(--ink-black);
+}
+
+.legend-card-box.selected-legend {
+  border-color: var(--ink-black);
+  box-shadow: 0 0 0 3px var(--lime-accent), var(--shadow-neo-lg);
+  background: #fbfdf9;
+}
+
+.legend-card-eye-strip {
+  width: 100%;
+  height: 125px;
+  background: #000000;
+  position: relative;
+  overflow: hidden;
+  border-bottom: var(--border-thick);
+}
+
+.legend-card-eye-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.legend-card-box:hover .legend-card-eye-img {
+  transform: scale(1.05);
+}
+
+.legend-card-threat-tag {
+  position: absolute;
+  bottom: 6px;
+  left: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 800;
+  background: rgba(15, 23, 42, 0.88);
+  color: var(--coral-accent);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  letter-spacing: 0.05em;
+  z-index: 2;
+}
+
+.legend-card-active-tag {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 800;
+  background: var(--lime-accent);
+  color: var(--ink-black);
+  border: 1.5px solid var(--ink-black);
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem;
+  box-shadow: 1.5px 1.5px 0 var(--ink-black);
+  z-index: 3;
+}
+
+.legend-card-body {
+  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.65rem;
+}
+
+.legend-card-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.legend-card-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.legend-card-film {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--coral-accent);
+  font-weight: 700;
+  margin-top: 0.2rem;
+}
+
+.legend-card-quote {
+  font-size: 0.82rem;
+  font-style: italic;
+  color: var(--ink-black);
+  background: var(--bg-cream);
+  border: 1.5px solid var(--ink-black);
+  border-radius: 8px;
+  padding: 0.45rem 0.65rem;
+  margin: 0;
+  line-height: 1.35;
+  flex: 1;
+}
+
+.legend-card-stats-row {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.legend-stat-pill {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 0.2rem 0.45rem;
+}
+
+.legend-stat-pill.lime strong { color: #16a34a; }
+.legend-stat-pill.coral strong { color: var(--coral-accent); }
+.legend-stat-pill.cyan strong { color: #0284c7; }
+
+.legend-card-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 0.35rem;
+}
+
+.legend-inspect-btn {
+  flex: 1;
+  font-size: 0.75rem;
+  padding: 0.45rem 0.75rem;
+  text-align: center;
+}
+
+.legend-voice-btn {
+  padding: 0.45rem 0.65rem;
+  font-size: 0.85rem;
+}
 .hud-corner-bracket {
   position: absolute;
   width: 14px;

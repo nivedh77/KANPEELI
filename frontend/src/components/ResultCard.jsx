@@ -22,13 +22,10 @@ function ResultCard({
   const [lashes, setLashes] = useState(146);
   const [displayCount, setDisplayCount] = useState(146);
   const [isAiFixed, setIsAiFixed] = useState(false);
-  const [allowManualEdit, setAllowManualEdit] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  // When result arrives from AI scan, update and lock the count with animation
-
-
+  // When result arrives from AI scan, update and lock the count permanently
   useEffect(() => {
     if (result?.lashes?.total) {
       const targetCount = result.lashes.total;
@@ -246,6 +243,9 @@ function ResultCard({
                 src={meme.image}
                 alt={meme.character}
                 className="meme-eye-strip-img"
+                onError={(e) => {
+                  e.target.src = meme.fallbackImage || "/memes/damu_eyes.jpg";
+                }}
               />
               <div className="eye-strip-scanline"></div>
               <span className="eye-strip-label">EYE ARCHIVE // {meme.movie.toUpperCase()}</span>
@@ -279,8 +279,6 @@ function ResultCard({
                 <p className="meme-quote-text">{meme.quote}</p>
               </div>
 
-
-
               <p className="meme-reason-text">
                 <strong>Ocular Match:</strong> {meme.reason}
               </p>
@@ -290,20 +288,17 @@ function ResultCard({
       )}
 
       {/* -------------------------------------------------------------
-          AI CERTIFIED COUNT STATUS BANNER
+          AI CERTIFIED COUNT STATUS BANNER (LOCKED & TAMPER-PROOF)
           ------------------------------------------------------------- */}
       {isAiFixed && result && (
         <div className="ai-certified-banner">
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.5rem" }}>
-            <span className="certified-badge">🔒 AI CERTIFIED FOLLICLE COUNT: {lashes} LASHES</span>
-            <button
-              type="button"
-              className="btn-neo btn-cream"
-              style={{ padding: "0.3rem 0.65rem", fontSize: "0.75rem" }}
-              onClick={() => setAllowManualEdit(!allowManualEdit)}
-            >
-              {allowManualEdit ? "Lock AI Count" : "✏️ Manual Override"}
-            </button>
+            <span className="certified-badge" style={{ background: "var(--lime-accent)", color: "var(--ink-black)" }}>
+              🔒 AI CERTIFIED FOLLICLE COUNT: {lashes} LASHES
+            </span>
+            <span className="badge-experiment" style={{ background: "#0f172a", color: "#38bdf8", border: "1.5px solid #38bdf8", padding: "0.25rem 0.65rem", fontSize: "0.75rem" }}>
+              ✓ PERMANENTLY SEALED
+            </span>
           </div>
 
           <div className="certified-breakdown-row">
@@ -335,7 +330,7 @@ function ResultCard({
 
       <div className="form-group">
         <label className="form-label">
-          TOTAL EYELASHES {isAiFixed && !allowManualEdit && <span style={{ color: "var(--coral-accent)" }}>(LOCKED TO AI COUNT)</span>}
+          TOTAL EYELASHES {isAiFixed && <span style={{ color: "var(--coral-accent)", fontWeight: 800 }}>🔒 (OFFICIALLY SEALED — UNEDITABLE)</span>}
         </label>
         <div className="stepper-row">
           <div className="stepper-controls">
@@ -343,8 +338,8 @@ function ResultCard({
               className="stepper-btn btn-minus"
               onClick={decrement}
               type="button"
-              disabled={isAiFixed && !allowManualEdit}
-              title={isAiFixed && !allowManualEdit ? "Click 'Manual Override' above to modify" : "Decrement"}
+              disabled={isAiFixed}
+              title={isAiFixed ? "Follicle count is officially sealed by AI scanner and cannot be altered" : "Decrement"}
             >
               −
             </button>
@@ -357,15 +352,15 @@ function ResultCard({
               className="stepper-btn btn-plus"
               onClick={increment}
               type="button"
-              disabled={isAiFixed && !allowManualEdit}
-              title={isAiFixed && !allowManualEdit ? "Click 'Manual Override' above to modify" : "Increment"}
+              disabled={isAiFixed}
+              title={isAiFixed ? "Follicle count is officially sealed by AI scanner and cannot be altered" : "Increment"}
             >
               +
             </button>
           </div>
           <span className="stepper-hint">
             {isAiFixed
-              ? "Calculated directly from your uploaded ocular geometry."
+              ? "🔒 Eyelashes are officially sealed from your scanned ocular geometry. Tampering prohibited for diploma integrity."
               : "Both eyes included. We are not monsters."}
           </span>
         </div>

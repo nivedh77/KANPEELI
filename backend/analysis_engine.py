@@ -153,7 +153,20 @@ def match_movie_meme(total, symmetry, drama_index, suspicion_level, difference):
             "image": "/memes/ramanan_eyes.jpg"
         }
 
-    # 7. Default -> Kumbidi (Jagathy Sreekumar in Nandanam)
+    # 7. Reel Culture / Modern Screen Wear -> The Gen-Z Zoomer
+    if suspicion_level <= 45 or (total >= 28 and total <= 38 and difference <= 3):
+        return {
+            "id": "zoomer",
+            "character": "The Gen-Z Zoomer",
+            "movie": "Premalu / Reel Culture",
+            "actor": "Naslen / Modern Youth",
+            "quote": "Bro ith real peeliya bro... literally no cap fr fr!",
+            "match_pct": 91,
+            "reason": "Infinite scroll ocular wear detected. 18 hours of continuous reel exposure.",
+            "image": "/memes/zoomer_eyes.svg"
+        }
+
+    # 8. Default -> Kumbidi (Jagathy Sreekumar in Nandanam)
     return {
         "id": "kumbidi",
         "character": "Kumbidi",

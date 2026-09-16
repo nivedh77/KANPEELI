@@ -108,6 +108,18 @@
     "rank": 9
   },
   {
+    "id": "lash-1789214941781",
+    "name": "Anonymous Eyelash",
+    "score": 68,
+    "lashes": 69,
+    "classification": "Spider Leg Overlord",
+    "movie_character": "Nagavalli (Ganga)",
+    "character_movie": "Manichitrathazhu",
+    "character_image": "/memes/nagavalli_eyes.jpg",
+    "timestamp": "Sep 12, 17:39",
+    "rank": 10
+  },
+  {
     "id": "lash-1789208610745",
     "name": "Anonymous Eyelash",
     "score": 55,
@@ -117,6 +129,6 @@
     "character_movie": "Manichitrathazhu",
     "character_image": "/memes/nagavalli_eyes.jpg",
     "timestamp": "Sep 12, 15:53",
-    "rank": 10
+    "rank": 11
   }
 ]
