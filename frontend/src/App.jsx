@@ -150,8 +150,8 @@ function App() {
       {/* Neo-brutalist Scrolling Marquee Ticker */}
       <div className="ocular-marquee-ticker">
         <div className="marquee-inner">
-          <span>⚡ TINKERHUB 3.0 USELESS PROJECTS ⚡ KANNPEELI (കൺപീലി) OCULAR RADAR V3.0 ⚡ CURRENT LASH DETACHMENT RISK: 0.04% ⚡ MAXIMUM RECORDED DRAMA INDEX: 99% (NAGAVALLI) ⚡ CERTIFIED BY THE SUPREME TRIBUNAL OF FOLLICULAR INTEGRITY ⚡ SHAMMI IS WATCHING YOUR SYMMETRY 👁️ ⚡ DUBAI-IL ITHOKKE REGULAR PEELIYA ⚡</span>
-          <span>⚡ TINKERHUB 3.0 USELESS PROJECTS ⚡ KANNPEELI (കൺപീലി) OCULAR RADAR V3.0 ⚡ CURRENT LASH DETACHMENT RISK: 0.04% ⚡ MAXIMUM RECORDED DRAMA INDEX: 99% (NAGAVALLI) ⚡ CERTIFIED BY THE SUPREME TRIBUNAL OF FOLLICULAR INTEGRITY ⚡ SHAMMI IS WATCHING YOUR SYMMETRY 👁️ ⚡ DUBAI-IL ITHOKKE REGULAR PEELIYA ⚡</span>
+          <span>⚡ TINKERHUB 3.0 USELESS PROJECTS ⚡ KANPEELI (കൺപീലി) OCULAR RADAR V3.0 ⚡ CURRENT LASH DETACHMENT RISK: 0.04% ⚡ MAXIMUM RECORDED DRAMA INDEX: 99% (NAGAVALLI) ⚡ CERTIFIED BY THE SUPREME TRIBUNAL OF FOLLICULAR INTEGRITY ⚡ SHAMMI IS WATCHING YOUR SYMMETRY 👁️ ⚡ DUBAI-IL ITHOKKE REGULAR PEELIYA ⚡</span>
+          <span>⚡ TINKERHUB 3.0 USELESS PROJECTS ⚡ KANPEELI (കൺപീലി) OCULAR RADAR V3.0 ⚡ CURRENT LASH DETACHMENT RISK: 0.04% ⚡ MAXIMUM RECORDED DRAMA INDEX: 99% (NAGAVALLI) ⚡ CERTIFIED BY THE SUPREME TRIBUNAL OF FOLLICULAR INTEGRITY ⚡ SHAMMI IS WATCHING YOUR SYMMETRY 👁️ ⚡ DUBAI-IL ITHOKKE REGULAR PEELIYA ⚡</span>
         </div>
       </div>
 
@@ -165,19 +165,19 @@ function App() {
       </div>
 
       {/* -------------------------------------------------------------
-          TOP BAR / NAVIGATION WITH KANNPEELI LOGO
+          TOP BAR / NAVIGATION WITH KANPEELI LOGO
           ------------------------------------------------------------- */}
       <header className="site-header">
         <a href="#" className="brand-badge">
           <div className="brand-icon-box" style={{ padding: "4px" }}>
             <img
               src="/logo.png"
-              alt="Kannpeeli Logo"
+              alt="Kanpeeli Logo"
               style={{ width: "100%", height: "100%", objectFit: "contain" }}
             />
           </div>
           <div>
-            <span className="brand-text">KANNPEELI</span>
+            <span className="brand-text">KANPEELI</span>
             <span style={{ display: "block", fontSize: "0.65rem", fontFamily: "var(--font-mono)", color: "var(--ink-muted)", lineHeight: 1 }}>
               കൺപീലി // OCULAR QUANTIFICATION
             </span>
@@ -503,7 +503,7 @@ function App() {
       {/* Footer */}
       <footer className="site-footer">
         <p>
-          <strong>KANNPEELI (കൺപീലി)</strong> is an entirely useless innovation created for <strong>TinkerHub 3.0 Useless Projects</strong>.
+          <strong>KANPEELI (കൺപീലി)</strong> is an entirely useless innovation created for <strong>TinkerHub 3.0 Useless Projects</strong>.
         </p>
         <p style={{ marginTop: "0.25rem", fontSize: "0.8rem" }}>
           No eyelashes were permanently harmed. Ranking algorithm precision: delightfully questionable.

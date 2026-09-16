@@ -104,7 +104,7 @@ function ResultCard({
         console.warn("Backend leaderboard unavailable, saving score locally:", err);
         // Resilient fallback: store locally so the user's certificate and score are preserved
         try {
-          const localList = JSON.parse(localStorage.getItem("kannpeeli_leaderboard") || "[]");
+          const localList = JSON.parse(localStorage.getItem("kanpeeli_leaderboard") || localStorage.getItem("kannpeeli_leaderboard") || "[]");
           localList.unshift({
             id: `lash-local-${Date.now()}`,
             name: name.trim() || "Anonymous Eyelash",
@@ -117,7 +117,7 @@ function ResultCard({
             timestamp: "Just now",
             rank: 1
           });
-          localStorage.setItem("kannpeeli_leaderboard", JSON.stringify(localList.slice(0, 50)));
+          localStorage.setItem("kanpeeli_leaderboard", JSON.stringify(localList.slice(0, 50)));
         } catch (storageErr) {
           console.error(storageErr);
         }
@@ -263,9 +263,9 @@ function ResultCard({
                   className="btn-neo btn-cream"
                   style={{ padding: "0.25rem 0.65rem", fontSize: "0.75rem" }}
                   onClick={() => {
-                    const text = `👁️ KANNPEELI RESULT: I have ${lashes} eyelashes and my Cinema Eye Twin is ${meme.character} from ${meme.movie}! "${meme.quote}"`;
+                    const text = `👁️ KANPEELI RESULT: I have ${lashes} eyelashes and my Cinema Eye Twin is ${meme.character} from ${meme.movie}! "${meme.quote}"`;
                     navigator.clipboard?.writeText(text);
-                    alert("Copied your Kannpeeli result to clipboard!");
+                    alert("Copied your Kanpeeli result to clipboard!");
                   }}
                   title="Copy result to clipboard"
                 >

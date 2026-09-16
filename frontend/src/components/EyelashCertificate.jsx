@@ -298,7 +298,7 @@ ARTICLE 2: The time spent obtaining this metric is permanently non-refundable.`;
                   <div className="seal-outer-ring">
                     <div className="seal-inner-ring">
                       <span className="seal-star">★ USELESS ★</span>
-                      <span className="seal-text-top">KANNPEELI</span>
+                      <span className="seal-text-top">KANPEELI</span>
                       <span className="seal-center-icon">👁️</span>
                       <span className="seal-text-bot">ROYAL DECREE</span>
                       <span className="seal-sub">100% INCONSEQUENTIAL</span>

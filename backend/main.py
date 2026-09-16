@@ -17,8 +17,8 @@ from roast_engine import generate_roast, generate_verdict
 from data_store import add_score, get_top_scores, clear_leaderboard
 
 app = FastAPI(
-    title="KANNPEELI",
-    description="കൺപീലി (Kannpeeli) - Ocular Hair Quantification & Movie Eye Doppelgänger - TinkerHub 3.0",
+    title="KANPEELI",
+    description="കൺപീലി (Kanpeeli) - Ocular Hair Quantification & Movie Eye Doppelgänger - TinkerHub 3.0",
     version="3.3.0"
 )
 
@@ -39,7 +39,7 @@ app.add_middleware(
 @app.get("/")
 def root():
     return {
-        "message": "KANNPEELI online.",
+        "message": "KANPEELI online.",
         "brand": "കൺപീലി",
         "purpose": "Counting things nobody asked us to count.",
         "status": "operational",
@@ -115,7 +115,7 @@ async def analyze_endpoint(file: UploadFile = File(...)):
         print("ANALYSIS ERROR:", error)
         return {
             "success": False,
-            "message": "The KANNPEELI core suffered an ocular overload.",
+            "message": "The KANPEELI core suffered an ocular overload.",
             "error": str(error)
         }
 

@@ -25,7 +25,7 @@ function Leaderboard({ refreshTrigger }) {
     }
 
     try {
-      const localScores = JSON.parse(localStorage.getItem("kannpeeli_leaderboard") || "[]");
+      const localScores = JSON.parse(localStorage.getItem("kanpeeli_leaderboard") || localStorage.getItem("kannpeeli_leaderboard") || "[]");
       const combined = [...localScores, ...serverScores];
       const seen = new Set();
       const deduplicated = [];
@@ -47,6 +47,7 @@ function Leaderboard({ refreshTrigger }) {
   async function handleClearLeaderboard() {
     if (window.confirm("Are you sure you want to clear past participants from the leaderboard?")) {
       try {
+        localStorage.removeItem("kanpeeli_leaderboard");
         localStorage.removeItem("kannpeeli_leaderboard");
         await clearLeaderboardApi();
       } catch (err) {

@@ -148,7 +148,7 @@ export async function getLeaderboard() {
 
   // Fallback to local storage or default seed entries
   try {
-    const local = JSON.parse(localStorage.getItem("kannpeeli_leaderboard") || "null");
+    const local = JSON.parse(localStorage.getItem("kanpeeli_leaderboard") || localStorage.getItem("kannpeeli_leaderboard") || "null");
     if (Array.isArray(local) && local.length > 0) {
       return local;
     }
@@ -174,9 +174,9 @@ export async function submitScore(name, score, lashes, classification, movieData
 
   // Always save locally first for instant, guaranteed persistence
   try {
-    const current = JSON.parse(localStorage.getItem("kannpeeli_leaderboard") || "null") || DEFAULT_LEADERBOARD;
+    const current = JSON.parse(localStorage.getItem("kanpeeli_leaderboard") || localStorage.getItem("kannpeeli_leaderboard") || "null") || DEFAULT_LEADERBOARD;
     const updated = [payload, ...current.filter(item => item.id !== payload.id)].slice(0, 40);
-    localStorage.setItem("kannpeeli_leaderboard", JSON.stringify(updated));
+    localStorage.setItem("kanpeeli_leaderboard", JSON.stringify(updated));
   } catch (storageErr) {
     console.warn("Local storage error:", storageErr);
   }
@@ -199,12 +199,13 @@ export async function submitScore(name, score, lashes, classification, movieData
     console.debug("Remote leaderboard sync omitted:", err);
   }
 
-  const local = JSON.parse(localStorage.getItem("kannpeeli_leaderboard") || "[]");
+  const local = JSON.parse(localStorage.getItem("kanpeeli_leaderboard") || localStorage.getItem("kannpeeli_leaderboard") || "[]");
   return local;
 }
 
 export async function clearLeaderboardApi() {
   try {
+    localStorage.removeItem("kanpeeli_leaderboard");
     localStorage.removeItem("kannpeeli_leaderboard");
   } catch (e) {}
 
